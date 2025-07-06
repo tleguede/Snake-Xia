@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Snake body -->
+  <path d="M20 50 Q30 30, 50 35 Q70 40, 80 25 Q85 20, 90 25" 
+        fill="none" 
+        stroke="#4ADE80" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+  
+  <!-- Snake head -->
+  <circle cx="90" cy="25" r="8" fill="#22C55E"/>
+  
+  <!-- Snake eye -->
+  <circle cx="88" cy="22" r="2" fill="#000"/>
+  
+  <!-- Snake tongue -->
+  <path d="M95 25 L100 23 M100 23 L102 21 M100 23 L102 25" 
+        stroke="#DC2626" 
+        stroke-width="1.5" 
+        stroke-linecap="round"/>
+</svg> 
