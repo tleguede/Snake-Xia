@@ -116,25 +116,39 @@ export default function Page() {
     }, [moveSnake]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-green-900 to-green-800 flex flex-col items-center justify-center p-4">
+        <div
+            className="min-h-screen bg-gradient-to-b from-green-900 to-green-800 flex flex-col items-center justify-center p-4"
+            data-oid="ouy4jw1"
+        >
             {/* Nokia-style header */}
-            <div className="mb-8 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-green-300 mb-2 font-mono tracking-wider">
+            <div className="mb-8 text-center" data-oid="awzgwcz">
+                <h1
+                    className="text-4xl md:text-6xl font-bold text-green-300 mb-2 font-mono tracking-wider"
+                    data-oid="-qebla5"
+                >
                     SNAKE XIA
                 </h1>
-                <p className="text-green-200 text-lg font-mono">Classic Nokia Game Experience</p>
+                <p className="text-green-200 text-lg font-mono" data-oid="f7k:c3v">
+                    Classic Nokia Game Experience
+                </p>
             </div>
 
             {/* Game container with Nokia-style border */}
-            <div className="bg-gray-800 p-6 rounded-lg border-4 border-gray-600 shadow-2xl">
+            <div
+                className="bg-gray-800 p-6 rounded-lg border-4 border-gray-600 shadow-2xl"
+                data-oid=".7ak_m4"
+            >
                 {/* Score display */}
-                <div className="flex justify-between mb-4 text-green-300 font-mono text-lg">
-                    <div>Score: {score}</div>
-                    <div>High: {highScore}</div>
+                <div
+                    className="flex justify-between mb-4 text-green-300 font-mono text-lg"
+                    data-oid="9tqxa8:"
+                >
+                    <div data-oid="e1ki._7">Score: {score}</div>
+                    <div data-oid="4yr1qn_">High: {highScore}</div>
                 </div>
 
                 {/* Game board */}
-                <div className="relative bg-black border-2 border-gray-600 p-2">
+                <div className="relative bg-black border-2 border-gray-600 p-2" data-oid="0-eni6:">
                     <div
                         className="grid gap-0 bg-green-900"
                         style={{
@@ -142,6 +156,7 @@ export default function Page() {
                             width: '400px',
                             height: '400px',
                         }}
+                        data-oid=":tk8-1u"
                     >
                         {Array.from({ length: BOARD_SIZE * BOARD_SIZE }).map((_, index) => {
                             const x = index % BOARD_SIZE;
@@ -161,6 +176,7 @@ export default function Page() {
                                         ${isSnake ? (isHead ? 'bg-green-400' : 'bg-green-500') : ''}
                                         ${isFood ? 'bg-red-500' : ''}
                                     `}
+                                    data-oid="90a.oxx"
                                 />
                             );
                         })}
@@ -168,76 +184,112 @@ export default function Page() {
 
                     {/* Game over overlay */}
                     {gameOver && (
-                        <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center">
-                            <div className="text-center text-green-300 font-mono">
-                                <div className="text-2xl mb-2">GAME OVER</div>
-                                <div className="text-lg mb-4">Final Score: {score}</div>
-                                <div className="text-sm">Press SPACE to restart</div>
+                        <div
+                            className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center"
+                            data-oid="kim7b12"
+                        >
+                            <div
+                                className="text-center text-green-300 font-mono"
+                                data-oid="gsdugzi"
+                            >
+                                <div className="text-2xl mb-2" data-oid="4y90xo9">
+                                    GAME OVER
+                                </div>
+                                <div className="text-lg mb-4" data-oid="2rra.xc">
+                                    Final Score: {score}
+                                </div>
+                                <div className="text-sm" data-oid="js44dej">
+                                    Press SPACE to restart
+                                </div>
                             </div>
                         </div>
                     )}
 
                     {/* Start screen */}
                     {!gameStarted && !gameOver && (
-                        <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center">
-                            <div className="text-center text-green-300 font-mono">
-                                <div className="text-2xl mb-4">SNAKE XIA</div>
-                                <div className="text-sm mb-2">Use arrow keys to move</div>
-                                <div className="text-sm">Press SPACE to start</div>
+                        <div
+                            className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center"
+                            data-oid="ep6orhe"
+                        >
+                            <div
+                                className="text-center text-green-300 font-mono"
+                                data-oid="3t6f3kj"
+                            >
+                                <div className="text-2xl mb-4" data-oid="teo5npa">
+                                    SNAKE XIA
+                                </div>
+                                <div className="text-sm mb-2" data-oid="07zy80s">
+                                    Use arrow keys to move
+                                </div>
+                                <div className="text-sm" data-oid="vx:3p-i">
+                                    Press SPACE to start
+                                </div>
                             </div>
                         </div>
                     )}
                 </div>
 
                 {/* Controls info */}
-                <div className="mt-4 text-center text-green-200 font-mono text-sm">
-                    <div className="mb-2">Use ↑ ↓ ← → to control the snake</div>
-                    <div>Eat the red food to grow and score points!</div>
+                <div
+                    className="mt-4 text-center text-green-200 font-mono text-sm"
+                    data-oid="o2c67xh"
+                >
+                    <div className="mb-2" data-oid="4sw4yv:">
+                        Use ↑ ↓ ← → to control the snake
+                    </div>
+                    <div data-oid="i92ok3b">Eat the red food to grow and score points!</div>
                 </div>
             </div>
 
             {/* Mobile controls */}
-            <div className="mt-6 grid grid-cols-3 gap-2 md:hidden">
-                <div></div>
+            <div className="mt-6 grid grid-cols-3 gap-2 md:hidden" data-oid="8v8o48f">
+                <div data-oid="-16j9j9"></div>
                 <button
                     className="bg-gray-700 text-green-300 p-3 rounded font-mono text-xl"
                     onClick={() => direction.y !== 1 && setDirection({ x: 0, y: -1 })}
+                    data-oid="v39_ss9"
                 >
                     ↑
                 </button>
-                <div></div>
+                <div data-oid="3::vcqx"></div>
                 <button
                     className="bg-gray-700 text-green-300 p-3 rounded font-mono text-xl"
                     onClick={() => direction.x !== 1 && setDirection({ x: -1, y: 0 })}
+                    data-oid="a8.j2wf"
                 >
                     ←
                 </button>
                 <button
                     className="bg-gray-700 text-green-300 p-3 rounded font-mono text-xl"
                     onClick={() => (!gameStarted ? startGame() : gameOver ? resetGame() : null)}
+                    data-oid="6r.3q11"
                 >
                     {!gameStarted ? 'START' : gameOver ? 'RESET' : '●'}
                 </button>
                 <button
                     className="bg-gray-700 text-green-300 p-3 rounded font-mono text-xl"
                     onClick={() => direction.x !== -1 && setDirection({ x: 1, y: 0 })}
+                    data-oid="gupm68k"
                 >
                     →
                 </button>
-                <div></div>
+                <div data-oid="54:ac_p"></div>
                 <button
                     className="bg-gray-700 text-green-300 p-3 rounded font-mono text-xl"
                     onClick={() => direction.y !== -1 && setDirection({ x: 0, y: 1 })}
+                    data-oid="h6vbotn"
                 >
                     ↓
                 </button>
-                <div></div>
+                <div data-oid="1w6pvbx"></div>
             </div>
 
             {/* Footer */}
-            <div className="mt-8 text-center text-green-200 font-mono text-sm">
-                <p>Relive the classic Nokia gaming experience</p>
-                <p className="mt-2 text-xs opacity-75">Built with React & Tailwind CSS</p>
+            <div className="mt-8 text-center text-green-200 font-mono text-sm" data-oid="3b0yn7t">
+                <p data-oid="z8pve1n">Relive the classic Nokia gaming experience</p>
+                <p className="mt-2 text-xs opacity-75" data-oid="3nfvy0l">
+                    Built with React & Tailwind CSS
+                </p>
             </div>
         </div>
     );
